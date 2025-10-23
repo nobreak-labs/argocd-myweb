@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deploy
+  labels:
+    app: myapp
+spec:
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp
+        image: ghcr.io/nobreak-labs/go-myweb
+        resources:
+          requests:
+            cpu: 100m
+            memory: 10Mi
+          limits:
+            cpu: 200m
+            memory: 20Mi
+        ports:
+        - containerPort: 8080
