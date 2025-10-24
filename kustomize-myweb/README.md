@@ -1,6 +1,6 @@
-# Kustomize MyApp
+# Kustomize MyWeb
 
-Kustomize를 사용하여 myapp 애플리케이션을 Kubernetes에 배포하기 위한 매니페스트입니다.
+Kustomize를 사용하여 myweb 애플리케이션을 Kubernetes에 배포하기 위한 매니페스트입니다.
 
 ## 애플리케이션 정보
 
@@ -18,9 +18,9 @@ kubectl apply -k .
 
 ### ArgoCD를 통한 배포
 ```bash
-argocd app create myapp \
-  --repo https://github.com/nobreak-labs/argocd-myapp.git \
-  --path kustomize-myapp \
+argocd app create myweb \
+  --repo https://github.com/nobreak-labs/argocd-myweb.git \
+  --path kustomize-myweb \
   --dest-server https://kubernetes.default.svc \
   --dest-namespace default
 ```

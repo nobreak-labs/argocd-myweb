@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-deploy
+  name: myweb
   labels:
-    app: myapp
+    app: myweb
 spec:
   strategy:
     type: RollingUpdate
@@ -13,14 +13,14 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: myapp
+      app: myweb
   template:
     metadata:
       labels:
-        app: myapp
+        app: myweb
     spec:
       containers:
-      - name: myapp
+      - name: myweb
         image: ghcr.io/nobreak-labs/go-myweb
         resources:
           requests:

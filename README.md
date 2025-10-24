@@ -1,3 +1,3 @@
-# ArgoCD MyApp
+# ArgoCD MyWeb
 
-ArgoCD를 사용한 Kubernetes 애플리케이션 배포 저장소입니다.
+ArgoCD를 위한 경량의 웹 애플리케이션 저장소입니다.

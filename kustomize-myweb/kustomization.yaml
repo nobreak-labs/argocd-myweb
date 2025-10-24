@@ -10,13 +10,13 @@ resources:
 
 labels:
 - pairs:
-    app: myapp
+    app: myweb
     managed: argocd
   includeSelectors: true
   includeTemplates: true
 
 replicas:
-- name: myapp-deploy
+- name: myweb
   count: 3
 
 images:
