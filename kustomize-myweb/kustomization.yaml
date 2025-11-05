@@ -20,6 +20,6 @@ replicas:
   count: 3
 
 images:
-- name: ghcr.io/nobreak-labs/go-myweb
-  newName: ghcr.io/nobreak-labs/go-myweb
-  newTag: v1.0
+- name: ghcr.io/nobreak-labs/myweb
+  newName: ghcr.io/nobreak-labs/myweb
+  newTag: "1.1"
